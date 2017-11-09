@@ -1,0 +1,22 @@
+ul{
+  width: 150px;
+}
+li{
+display: block;
+margin-top: 2px;
+}
+
+a{
+  padding: 5px;
+  display: block;
+  color: grey;
+  text-decoration: none;
+  background: linear-gradient(to top, blue, green);
+}
+
+a:hover{
+  display: block;
+  color: white;
+  background: linear-gradient(to top, blue, green);
+  text-decoration: none;
+}

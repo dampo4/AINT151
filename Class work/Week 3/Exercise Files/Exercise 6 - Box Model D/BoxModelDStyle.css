@@ -1,0 +1,41 @@
+#container{
+  font-size: 25px;
+  margin: 0 auto;
+  width: 900px;
+}
+
+#header{
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+  background-color: lightgrey;
+  margin-bottom: 10px;
+}
+
+#rightmenu{
+  text-align: center;
+  line-height: 430px;
+  float: right;
+  height: 430px;
+  width: 290px;
+  background-color: lightgrey;
+}
+
+.leftitem{
+  text-align: center;
+  line-height: 100px;
+  float: left;
+  height: 100px;
+  width: 600px;
+  background-color: lightgrey;
+  margin-bottom: 10px;
+}
+
+#footer{
+  text-align: center;
+  line-height: 30px;
+  clear: both;
+  background-color: lightgrey;
+  height: 30px;
+  width: 900px;
+}

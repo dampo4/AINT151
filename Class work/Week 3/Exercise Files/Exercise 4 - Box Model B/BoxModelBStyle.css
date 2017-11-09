@@ -1,0 +1,52 @@
+#container{
+  font-size: 25px;
+  margin: 0 auto;
+  width: 900px;
+}
+
+#header{
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+
+  background-color: lightgrey;
+}
+
+#leftmenu{
+  text-align: center;
+  line-height: 500px;
+  float: left;
+  background-color: lightgrey;
+  height: 500px;
+  width: 245px;
+  margin-right: 10px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px;
+}
+
+#rightmenu{
+  text-align: center;
+  line-height: 500px;
+  float: left;
+  background-color: lightgrey;
+  height: 500px;
+  width: 245px;
+  margin-top: 10px;
+}
+
+#maincontent{
+  text-align: center;
+  line-height: 500px;
+  float: left;
+  background-color: lightgrey;
+  height: 500px;
+  width: 390px;
+  margin-top: 10px; margin-right: 10px;
+}
+
+#footer{
+  text-align: center;
+  line-height: 30px;
+  clear: both;
+  background-color: lightgrey;
+  height: 30px;
+  width: 900px;
+}
