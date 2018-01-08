@@ -1,7 +1,9 @@
 body{
+  margin: 0 auto;
   background-image: url(jungle_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 h3 {
@@ -15,19 +17,31 @@ p {
 }
 
 #scroll{
-  margin: 0 auto;
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-image: url(scroll.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center center;
+  background-size: 100% 100%
+}
+
+#content{
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .text {
   padding: 20px;
   padding-bottom: 5px;
-  width: 70%;
   border-width: 2px;
   border-style: solid;
-  margin-right: 10px;
 }
 
 #inventory table {
