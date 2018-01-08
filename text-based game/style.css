@@ -1,0 +1,44 @@
+body{
+  background-image: url(jungle_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h3 {
+  padding: 10px;
+  padding-left: 20px;
+}
+
+p {
+  padding: 10px;
+  padding-left: 20px;
+}
+
+#scroll{
+  margin: 0 auto;
+  background-image: url(scroll.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text {
+  padding: 20px;
+  padding-bottom: 5px;
+  width: 70%;
+  border-width: 2px;
+  border-style: solid;
+  margin-right: 10px;
+}
+
+#inventory table {
+  border: 2px solid black;
+  margin-bottom: 20px;
+  padding: 20px;
+  padding-right: 40px;
+  width: 20%;
+  float: middle;
+}
+
+.stuff li {
+  margin-right: 100px;
+}
