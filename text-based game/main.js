@@ -1,5 +1,6 @@
 var items = [];
-
+var roomSound = new Audio("room_sound.wav")
+var itemSound = new Audio("item_sound.wav")
 function OnLoad()
 {
 	SelectRoom(0);
@@ -19,7 +20,7 @@ function SelectRoom(roomIndex)
 	//displays items in the room and calls the PickUpItem function
 	if (roomArray[roomIndex].items != null) {
 		for (var i = 0; i < roomArray[roomIndex].items.length; i++){
-			document.getElementById('roomItems').innerHTML += "<button onClick='PickUpItem("+roomIndex+","+i+")'>"  + roomArray[roomIndex].items[i].option + "</button>";
+			document.getElementById('roomItems').innerHTML += "<button onClick='PickUpItem("+roomIndex+","+i+")', onmousedown='itemSound.play()'>"  + roomArray[roomIndex].items[i].option + "</button>";
 		}
 	}
 
@@ -30,28 +31,28 @@ function SelectRoom(roomIndex)
 		{
 			if(roomArray[roomIndex].choices[i].clickable > 0)
 			{
-				document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")'>"  + roomArray[roomIndex].choices[i].text + "</button>";
+				document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")', onmousedown='roomSound.play()'>"  + roomArray[roomIndex].choices[i].text + "</button>";
 		 	}
 		}
 		else if (roomIndex == 3 && items.indexOf('Machete') != -1) {
-			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")'>"  + roomArray[roomIndex].choices[i].text + "</button>";
+			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")', onmousedown='roomSound.play()'>"  + roomArray[roomIndex].choices[i].text + "</button>";
 			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+12+","+3+","+i+")'>"  + 'Use the machete to carve a path' + "</button>";
 		}
 		else if (roomIndex == 1 && items.indexOf('Rope') != -1) {
-			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")'>"  + roomArray[roomIndex].choices[i].text + "</button>";
+			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")', onmousedown='roomSound.play()'>"  + roomArray[roomIndex].choices[i].text + "</button>";
 			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+15+","+1+","+i+")'>"  + 'Lasso a branch and swing across' + "</button>";
 		}
 		else if (roomIndex == 16 && items.indexOf('Torch') != -1) {
-			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")'>"  + roomArray[roomIndex].choices[i].text + "</button>";
+			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+"), onmousedown='roomSound.play()''>"  + roomArray[roomIndex].choices[i].text + "</button>";
 			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+17+","+16+","+i+")'>"  + 'Explore deeper into the cave' + "</button>";
 		}
 		else if (roomIndex == 17 && items.indexOf('Knife') != -1) {
-			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")'>"  + roomArray[roomIndex].choices[i].text + "</button>";
+			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")', onmousedown='roomSound.play()'>"  + roomArray[roomIndex].choices[i].text + "</button>";
 			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+19+","+17+","+i+")'>"  + 'Kill yourself with your knife' + "</button>";
 		}
 		else
 		{
-			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")'>"  + roomArray[roomIndex].choices[i].text + "</button>";
+			document.getElementById('roomChoices').innerHTML += "<button onClick='Control("+roomArray[roomIndex].choices[i].index+","+roomIndex+","+i+")', onmousedown='roomSound.play()'>"  + roomArray[roomIndex].choices[i].text + "</button>";
 		}
 }
 
@@ -111,7 +112,7 @@ function PickUpItem(roomIndex, i)
 	else {
 		alert("You have already picked up this item!");
 	}
-	if(roomArray[6].items[0].pickedUp && roomArray[6].items[1].pickedUp && roomArray[6].items[2].pickedUp && roomArray[6].items[3].pickedUp)
+	if(roomArray[6].items[0].pickedUp && roomArray[6].items[1].pickedUp && roomArray[6].items[2].pickedUp)
 	{
 		roomArray[6].allItems = true;
 	}
